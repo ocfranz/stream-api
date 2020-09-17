@@ -1,35 +1,36 @@
 {
-  "name": "express-api-starter",
-  "version": "1.2.0",
-  "description": " A basic starter for an express.js API",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "lint": "eslint --fix src",
-    "test": "mocha --exit"
-  },
-  "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
-  },
-  "license": "MIT",
+  "name": "stream-api",
+  "version": "1.0.0",
+  "description": "Owl stream API REST",
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.23.3",
-    "joi": "^17.2.1",
-    "morgan": "^1.10.0"
+    "joi": "^17.2.1"
   },
   "devDependencies": {
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.5",
     "mocha": "^8.1.2",
-    "nodemon": "^2.0.4",
-    "supertest": "^4.0.2"
-  }
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "mocha",
+    "dev:start": "nodemon ./src/index.js --exec babel-node  ",
+    "build": "babel ./src/index.js -d build",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocfranz/todo-api.git"
+  },
+  "author": "ocfranz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocfranz/todo-api/issues"
+  },
+  "homepage": "https://github.com/ocfranz/todo-api#readme"
 }
